@@ -71,7 +71,7 @@ public class Player : MonoBehaviour
         Vector3 forward = transform.TransformDirection(Vector3.forward);
         Vector3 right = transform.TransformDirection(Vector3.right);
 
-        bool isRunning = Input.GetKey(KeyCode.LeftShift);
+        bool isRunning = Input.GetButton("Run");
         float curSpeedX = canMove ? (isRunning ? runningSpeed : walkingSpeed) * Input.GetAxis("Vertical") : 0;
         float curSpeedY = canMove ? (isRunning ? runningSpeed : walkingSpeed) * Input.GetAxis("Horizontal") : 0;
         float movementDirectionY = moveDirection.y;
@@ -106,7 +106,7 @@ public class Player : MonoBehaviour
 
         RaycastHit hit;
 
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetButton("PickUp"))
         {
             if (Physics.Raycast(pickupRay, out hit, m_distance, m_pickable_Object))
             {
@@ -137,7 +137,7 @@ public class Player : MonoBehaviour
             }
         }
 
-        if (Input.GetMouseButtonDown(1))
+        if (Input.GetButton("Throw"))
         {
             if (!m_rigidbody)
             {
