@@ -15,6 +15,6 @@ public class ScoreScript : MonoBehaviour
 
     private void Update()
     {
-        GetComponent<UnityEngine.UI.Text>().text = $" Score : {m_scorePlayer.ToString()}";
+        GetComponent<UnityEngine.UI.Text>().text = m_scorePlayer.ToString();
     }
 }
