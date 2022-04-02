@@ -57,7 +57,7 @@ public class KeyBoardPlayer : MonoBehaviour
 
     public bool m_isHolding;
 
-    
+  
     void Start()
     {
         characterController = GetComponent<CharacterController>();
@@ -120,6 +120,8 @@ public class KeyBoardPlayer : MonoBehaviour
                     m_collider.enabled = false;
 
                     m_isHolding = true;
+
+
                 }
 
                 return;
@@ -154,6 +156,7 @@ public class KeyBoardPlayer : MonoBehaviour
         {
             m_rigidbody.position = m_hand.position;
             m_rigidbody.rotation = m_hand.rotation;
+
         }
     }
 }

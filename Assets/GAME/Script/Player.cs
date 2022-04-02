@@ -57,6 +57,8 @@ public class Player : MonoBehaviour
     private Rigidbody m_rigidbody;
     private Collider m_collider;
 
+    
+
 
     void Start()
     {
@@ -116,10 +118,12 @@ public class Player : MonoBehaviour
                     m_collider = hit.collider;
 
                     m_rigidbody.isKinematic = true;
-                    m_rigidbody.useGravity = true;
+                    m_rigidbody.useGravity = false;
                     m_collider.enabled = false;
 
                     m_isHolding = true;
+
+
                 }
 
                 return;
@@ -128,6 +132,7 @@ public class Player : MonoBehaviour
             if(m_rigidbody)
             {
                 m_rigidbody.isKinematic = false;
+                m_rigidbody.useGravity = true;
                 m_collider.enabled = true;
 
                 m_rigidbody = null;
