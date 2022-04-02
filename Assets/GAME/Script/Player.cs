@@ -141,7 +141,6 @@ public class Player : MonoBehaviour
         {
             if (!m_rigidbody)
             {
-                Debug.Log("tu peux pas pick avec ce boutton");
             }
             else
             {
