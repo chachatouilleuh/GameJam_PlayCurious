@@ -12,7 +12,7 @@ GameObject:
   m_Layer: 3
   m_Name: HoldParent
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 7148428337604731935, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -24,7 +24,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 788320960021251596}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.0049991608, z: 1.678}
+  m_LocalPosition: {x: 0, y: -0.888, z: 1.37}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 5530797421568947238}
@@ -106,6 +106,13 @@ MonoBehaviour:
   moveDirection: {x: 0, y: 0, z: 0}
   rotationX: 0
   canMove: 1
+  m_pickable_Object:
+    serializedVersion: 2
+    m_Bits: 0
+  fpsCam: {fileID: 0}
+  m_distance: 0
+  m_hand: {fileID: 0}
+  m_isHolding: 0
 --- !u!33 &5530797421391154596
 MeshFilter:
   m_ObjectHideFlags: 0
