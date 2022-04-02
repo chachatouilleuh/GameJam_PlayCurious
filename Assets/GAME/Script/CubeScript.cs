@@ -6,4 +6,14 @@ using UnityEngine.Serialization;
 
 public class CubeScript : MonoBehaviour
 {
+    [SerializeField, Tooltip("transform de cube")]
+    private Transform m_cubeTransform0;
+    
+    [SerializeField, Tooltip("transform de cube")]
+    private Transform m_cubeTransform1;
+
+    private void Update()
+    {
+        m_cubeTransform0.transform.position = m_cubeTransform1.transform.position;
+    }
 }
