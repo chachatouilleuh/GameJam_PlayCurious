@@ -44,7 +44,7 @@ GameObject:
   - component: {fileID: 5530797421391154596}
   - component: {fileID: 5530797421391154597}
   m_Layer: 3
-  m_Name: FirstPersonController
+  m_Name: GamePadFirstPersonController
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -108,10 +108,10 @@ MonoBehaviour:
   canMove: 1
   m_pickable_Object:
     serializedVersion: 2
-    m_Bits: 0
-  fpsCam: {fileID: 0}
-  m_distance: 0
-  m_hand: {fileID: 0}
+    m_Bits: 128
+  m_distance: 4
+  m_hand: {fileID: 6809381982522505121}
+  m_punch: 400
   m_isHolding: 0
 --- !u!33 &5530797421391154596
 MeshFilter:

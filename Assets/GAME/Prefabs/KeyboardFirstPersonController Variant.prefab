@@ -1,0 +1,107 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &3281945156861834754
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 5530797421391154601, guid: 72825116dd638c940bee7458094d981c, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5530797421391154601, guid: 72825116dd638c940bee7458094d981c, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 10.833
+      objectReference: {fileID: 0}
+    - target: {fileID: 5530797421391154601, guid: 72825116dd638c940bee7458094d981c, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -34.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5530797421391154601, guid: 72825116dd638c940bee7458094d981c, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -12.475
+      objectReference: {fileID: 0}
+    - target: {fileID: 5530797421391154601, guid: 72825116dd638c940bee7458094d981c, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5530797421391154601, guid: 72825116dd638c940bee7458094d981c, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5530797421391154601, guid: 72825116dd638c940bee7458094d981c, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5530797421391154601, guid: 72825116dd638c940bee7458094d981c, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5530797421391154601, guid: 72825116dd638c940bee7458094d981c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5530797421391154601, guid: 72825116dd638c940bee7458094d981c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5530797421391154601, guid: 72825116dd638c940bee7458094d981c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5530797421391154606, guid: 72825116dd638c940bee7458094d981c, type: 3}
+      propertyPath: m_Name
+      value: KeyboardFirstPersonController
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 5530797421568947232, guid: 72825116dd638c940bee7458094d981c, type: 3}
+    - {fileID: 5530797421391154602, guid: 72825116dd638c940bee7458094d981c, type: 3}
+    - {fileID: 5530797421568947236, guid: 72825116dd638c940bee7458094d981c, type: 3}
+  m_SourcePrefab: {fileID: 100100000, guid: 72825116dd638c940bee7458094d981c, type: 3}
+--- !u!1 &7010584307789642668 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5530797421391154606, guid: 72825116dd638c940bee7458094d981c, type: 3}
+  m_PrefabInstance: {fileID: 3281945156861834754}
+  m_PrefabAsset: {fileID: 0}
+--- !u!20 &7010584308135182885 stripped
+Camera:
+  m_CorrespondingSourceObject: {fileID: 5530797421568947239, guid: 72825116dd638c940bee7458094d981c, type: 3}
+  m_PrefabInstance: {fileID: 3281945156861834754}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &8355311380645200291 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6809381982522505121, guid: 72825116dd638c940bee7458094d981c, type: 3}
+  m_PrefabInstance: {fileID: 3281945156861834754}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1098454031
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7010584307789642668}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 928f90b5985c5504d96580953205e57f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  walkingSpeed: 7.5
+  runningSpeed: 11.5
+  jumpSpeed: 8
+  gravity: 20
+  playerCamera: {fileID: 7010584308135182885}
+  lookSpeed: 0.2
+  lookXLimit: 45
+  characterController: {fileID: 0}
+  moveDirection: {x: 0, y: 0, z: 0}
+  rotationX: 0
+  canMove: 1
+  m_pickable_Object:
+    serializedVersion: 2
+    m_Bits: 128
+  m_distance: 4
+  m_hand: {fileID: 8355311380645200291}
+  m_punch: 400
+  m_isHolding: 0
