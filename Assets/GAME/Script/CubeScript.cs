@@ -14,6 +14,6 @@ public class CubeScript : MonoBehaviour
 
     private void Update()
     {
-        m_cubeTransform0.transform.position = m_cubeTransform1.transform.position;
+        m_cubeTransform0.transform.position = new Vector3(m_cubeTransform1.position.x, transform.position.y, m_cubeTransform1.position.z);
     }
 }
