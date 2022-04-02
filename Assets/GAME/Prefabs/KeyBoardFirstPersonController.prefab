@@ -42,9 +42,9 @@ GameObject:
   - component: {fileID: 5530797421391154600}
   - component: {fileID: 5530797421391154596}
   - component: {fileID: 5530797421391154597}
-  - component: {fileID: 6049202266565346991}
+  - component: {fileID: 5367200326518127092}
   m_Layer: 3
-  m_Name: GamePadFirstPersonController
+  m_Name: KeyBoardFirstPersonController
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -132,7 +132,7 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &6049202266565346991
+--- !u!114 &5367200326518127092
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -141,7 +141,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 5530797421391154606}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 17fdd855aae39f2479ed687f02457f3e, type: 3}
+  m_Script: {fileID: 11500000, guid: 928f90b5985c5504d96580953205e57f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   walkingSpeed: 7.5
