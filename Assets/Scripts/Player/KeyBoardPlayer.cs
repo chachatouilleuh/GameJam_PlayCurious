@@ -57,6 +57,12 @@ public class KeyBoardPlayer : MonoBehaviour
 
     [SerializeField, Tooltip("gameobject target")]
     private GameObject m_curTarget;
+    
+    [SerializeField, Tooltip("gameobject target")]
+    private GameObject m_curTarget1;
+    
+    [SerializeField, Tooltip("gameobject target")]
+    private GameObject m_curTarget2;
 
     void Start()
     {
@@ -119,6 +125,8 @@ public class KeyBoardPlayer : MonoBehaviour
                     m_collider.enabled = false;
 
                     m_curTarget.GetComponent<CubeScript>().enabled = true;
+                    m_curTarget1.GetComponent<CubeScript>().enabled = true;
+                    m_curTarget2.GetComponent<CubeScript>().enabled = true;
 
 
                 }
@@ -135,6 +143,8 @@ public class KeyBoardPlayer : MonoBehaviour
                 m_collider = null;
 
                 m_curTarget.GetComponent<CubeScript>().enabled = false;
+                m_curTarget1.GetComponent<CubeScript>().enabled = false;
+                m_curTarget2.GetComponent<CubeScript>().enabled = false;
             }
         }
 
@@ -149,6 +159,8 @@ public class KeyBoardPlayer : MonoBehaviour
             m_collider = null;
 
             m_curTarget.GetComponent<CubeScript>().enabled = false;
+            m_curTarget1.GetComponent<CubeScript>().enabled = false;
+            m_curTarget2.GetComponent<CubeScript>().enabled = false;
         }
 
         if (m_rigidbody)

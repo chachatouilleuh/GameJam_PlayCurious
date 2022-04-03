@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 8807421111564610518}
   - component: {fileID: 8807421111564610515}
   - component: {fileID: 8373175341343951012}
-  - component: {fileID: 1376136981292177760}
+  - component: {fileID: 6708898861050788348}
   m_Layer: 7
   m_Name: Cube
   m_TagString: Untagged
@@ -114,9 +114,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_cubeTransform0: {fileID: 0}
-  m_cubeTransform1: {fileID: 0}
---- !u!135 &1376136981292177760
-SphereCollider:
+--- !u!65 &6708898861050788348
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -126,8 +125,8 @@ SphereCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.6497265
-  m_Center: {x: 0, y: -0.012162566, z: 0}
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &1382197993469783452
 PrefabInstance:
   m_ObjectHideFlags: 0

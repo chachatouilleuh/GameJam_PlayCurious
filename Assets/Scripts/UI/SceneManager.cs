@@ -24,14 +24,14 @@ public class SceneManager : MonoBehaviour
     
     public void OpenGameScene()
     {
-        if (m_choix == 1)
+        if (m_choix == 2)
         {
-            UnityEngine.SceneManagement.SceneManager.LoadScene (sceneName:"GAME");
+            UnityEngine.SceneManagement.SceneManager.LoadScene (sceneName:"GAME 3");
 
         }
-        else if (m_choix == 2)
+        else if (m_choix == 1)
         {
-            UnityEngine.SceneManagement.SceneManager.LoadScene (sceneName:"GAME");
+            UnityEngine.SceneManagement.SceneManager.LoadScene (sceneName:"GAME 4");
         }
     }
     

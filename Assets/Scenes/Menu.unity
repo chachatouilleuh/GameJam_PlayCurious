@@ -1050,6 +1050,8 @@ MonoBehaviour:
   Tuto: {fileID: 1718364793}
   Selection: {fileID: 1167243011}
   LoadScreen: {fileID: 1310278447}
+  Endgame: {fileID: 0}
+  Endgame2: {fileID: 0}
   KeyboardU: {fileID: 1312308586}
   GamepadU: {fileID: 2052291090}
   KeyboardM: {fileID: 2114944147}
@@ -3433,7 +3435,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1167243012
 MonoBehaviour:
   m_ObjectHideFlags: 0

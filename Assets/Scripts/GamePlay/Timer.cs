@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class Timer : MonoBehaviour
 {
@@ -10,6 +11,8 @@ public class Timer : MonoBehaviour
     [SerializeField, Tooltip("time at start")] private float m_timeAtStart;
     
     [SerializeField, Tooltip("time")] private Text m_countdownText;
+
+    public GameObject Endgame;
     
     // public bool timerIsRunning = false;
     // public Text timeText;
@@ -32,7 +35,19 @@ public class Timer : MonoBehaviour
         if (m_timeRemaining < 0)
         {
             m_timeRemaining = 0;
+            
+                Endgame.SetActive(true);
+                Cursor.lockState = CursorLockMode.None;
+                Cursor.visible = true;
+                StartCoroutine(WaitForSec());
         }
+        
+        IEnumerator WaitForSec()
+        {
+            yield return new WaitForSeconds(5);
+            UnityEngine.SceneManagement.SceneManager.LoadScene (sceneName:"Credits");
+        }
+        
         // if (timerIsRunning)
         // {
         //     if (timeRemaining > 0)
