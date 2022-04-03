@@ -4,10 +4,10 @@ public class CanvasManager : MonoBehaviour
 {
     //private SceneManager sceneManager;
 
-    [SerializeField, Tooltip("les canvas à assigner")] private GameObject Accueil, MainMenu, Options, Tuto, LoadScreen;
+    [SerializeField, Tooltip("les canvas à assigner")] private GameObject Accueil, MainMenu, Options, Tuto, Selection, LoadScreen;
 
     private bool m_accueilOpen;
-    private bool m_mainMenuOpen, m_optionsOpen, m_loadScreenOpen, m_tutoOpen;
+    private bool m_mainMenuOpen, m_optionsOpen, m_loadScreenOpen, m_tutoOpen, m_selectionOpen;
     
 
     // INITIALISE LES VALEURS
@@ -85,6 +85,20 @@ public class CanvasManager : MonoBehaviour
         {
             LoadScreen.SetActive(false);
             m_loadScreenOpen = false;
+        }
+    }
+    
+    public void OpenSelection()
+    {
+        if (!m_selectionOpen)
+        {
+            Selection.SetActive(true);
+            m_selectionOpen = true;
+        }
+        else
+        {
+            Selection.SetActive(false);
+            m_selectionOpen = false;
         }
     }
 }
