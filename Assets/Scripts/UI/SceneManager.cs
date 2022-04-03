@@ -28,7 +28,8 @@ public class SceneManager : MonoBehaviour
         {
             UnityEngine.SceneManagement.SceneManager.LoadScene (sceneName:"GAME");
 
-        }if (m_choix == 2)
+        }
+        else if (m_choix == 2)
         {
             UnityEngine.SceneManagement.SceneManager.LoadScene (sceneName:"GAME");
         }

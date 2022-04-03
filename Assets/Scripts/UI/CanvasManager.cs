@@ -5,10 +5,10 @@ public class CanvasManager : MonoBehaviour
 {
     //private SceneManager sceneManager;
 
-    [SerializeField, Tooltip("les canvas à assigner")] private GameObject Accueil, MainMenu, Options, Tuto, Selection, LoadScreen;
+    [SerializeField, Tooltip("les canvas à assigner")] private GameObject Accueil, MainMenu, Options, Tuto, Selection, LoadScreen, Endgame;
 
     private bool m_accueilOpen;
-    private bool m_mainMenuOpen, m_optionsOpen, m_loadScreenOpen, m_tutoOpen, m_selectionOpen;
+    private bool m_mainMenuOpen, m_optionsOpen, m_loadScreenOpen, m_tutoOpen, m_selectionOpen, m_endgameOpen;
 
 
     [SerializeField, Tooltip("le menu de slection de letage")]
@@ -165,6 +165,21 @@ public class CanvasManager : MonoBehaviour
         {
             Selection.SetActive(false);
             m_selectionOpen = false;
+        }
+    }
+    public void OpenEndgame()
+    {
+        if (!m_endgameOpen)
+        {
+            Endgame.SetActive(true);
+            m_endgameOpen = true;
+            
+            
+        }
+        else
+        {
+            Endgame.SetActive(false);
+            m_endgameOpen = false;
         }
     }
 }

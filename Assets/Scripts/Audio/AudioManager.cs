@@ -5,11 +5,11 @@ using UnityEngine;
 public class AudioManager : MonoBehaviour
 {
 
-    [SerializeField, Tooltip("la liste des sfx de la scène")] private Sound[] sounds;
+    public Sound[] l_sounds;
 
     void Awake()
     {
-        foreach (Sound s in sounds)
+        foreach (Sound s in l_sounds)
         {
             s.source = gameObject.AddComponent<AudioSource>();
             s.source.clip = s.clip;
@@ -19,7 +19,7 @@ public class AudioManager : MonoBehaviour
 
     public void Play(string name)
     {
-        Sound s = Array.Find(sounds, sound => sound.objectName == name);
+        Sound s = Array.Find(l_sounds, sounds => sounds.objectName == name);
         s.source.Play();
     }
 }

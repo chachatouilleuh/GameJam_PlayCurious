@@ -1,7 +1,8 @@
 using UnityEngine.Audio;
 using UnityEngine;
 
-[System.Serializable] public class Sound : MonoBehaviour
+[System.Serializable]
+public class Sound
 {
     //[SerializeField, Tooltip("le nom du sfx en question")]private string name;
     public string objectName;
