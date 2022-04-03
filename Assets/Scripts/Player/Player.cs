@@ -52,12 +52,11 @@ public class Player : MonoBehaviour
     [SerializeField, Tooltip("puissance du jet")]
     private float m_punch;
 
-    public bool m_isHolding = false;
-    
     private Rigidbody m_rigidbody;
     private Collider m_collider;
 
-    
+    [SerializeField, Tooltip("gameobject target")]
+    private GameObject m_curTarget;
 
 
     void Start()
@@ -121,9 +120,7 @@ public class Player : MonoBehaviour
                     m_rigidbody.useGravity = false;
                     m_collider.enabled = false;
 
-                    m_isHolding = true;
-
-
+                    m_curTarget.GetComponent<CubeScript>().enabled = true;
                 }
 
                 return;
@@ -137,8 +134,8 @@ public class Player : MonoBehaviour
 
                 m_rigidbody = null;
                 m_collider = null;
-
-                m_isHolding = false;
+                
+                m_curTarget.GetComponent<CubeScript>().enabled = false;
             }
         }
 
@@ -150,12 +147,15 @@ public class Player : MonoBehaviour
             else
             {
                 m_rigidbody.isKinematic = false;
+                m_rigidbody.useGravity = true;
                 m_collider.enabled = true;
             
                 m_rigidbody.AddForce(m_hand.transform.forward * m_punch);
 
                 m_rigidbody = null;
                 m_collider = null;
+                
+                m_curTarget.GetComponent<CubeScript>().enabled = false;
             }
         }
 
