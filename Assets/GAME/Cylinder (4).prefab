@@ -12,7 +12,13 @@ GameObject:
   - component: {fileID: 8224497642061788044}
   - component: {fileID: 8224497642061788043}
   - component: {fileID: 8224497642061788042}
+<<<<<<< Updated upstream:Assets/GAME/Cylinder (4).prefab
   m_Layer: 0
+=======
+  - component: {fileID: 2508076669858392364}
+  - component: {fileID: 8497315763332694036}
+  m_Layer: 8
+>>>>>>> Stashed changes:Assets/Prefabs/Cylinder (4).prefab
   m_Name: Cylinder (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -96,3 +102,39 @@ CapsuleCollider:
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}
+<<<<<<< Updated upstream:Assets/GAME/Cylinder (4).prefab
+=======
+--- !u!114 &2508076669858392364
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8224497642061788041}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b07ea5c7d122aa43afce07adb71463d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_scoreScript: {fileID: 0}
+  m_Layer:
+    serializedVersion: 2
+    m_Bits: 128
+--- !u!114 &8497315763332694036
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8224497642061788041}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 214494be6ea97ee4a811f564633dc366, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audiosource: {fileID: 0}
+  alreadyPlayed: 0
+  m_Layer:
+    serializedVersion: 2
+    m_Bits: 128
+>>>>>>> Stashed changes:Assets/Prefabs/Cylinder (4).prefab
