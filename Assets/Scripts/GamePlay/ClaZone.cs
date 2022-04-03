@@ -8,6 +8,9 @@ public class ClaZone : MonoBehaviour
 {
     [SerializeField, Tooltip("total points")]
     private ScoreScript m_scoreScript;
+
+    [SerializeField, Tooltip("sript timer")]
+    private Timer m_timerScript;
     
     [SerializeField, Tooltip("layer des boites")]
     private LayerMask m_Layer;
@@ -18,13 +21,16 @@ public class ClaZone : MonoBehaviour
     {
         if ((m_Layer.value & (1 << other.gameObject.layer)) > 0)
         {
-            if (other.gameObject.CompareTag("cube1"))
+            if (m_timerScript.m_timeRemaining != 0)
             {
-                m_scoreScript.m_scorePlayer += 1;
-            }
-            else if (other.gameObject.CompareTag("cube5"))
-            {
-                m_scoreScript.m_scorePlayer += 5;
+                if (other.gameObject.CompareTag("cube1"))
+                {
+                    m_scoreScript.m_scorePlayer += 1;
+                }
+                else if (other.gameObject.CompareTag("cube5"))
+                {
+                    m_scoreScript.m_scorePlayer += 5;
+                }
             }
         }
     }

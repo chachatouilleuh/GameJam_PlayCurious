@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public class CanvasManager : MonoBehaviour
@@ -8,13 +9,76 @@ public class CanvasManager : MonoBehaviour
 
     private bool m_accueilOpen;
     private bool m_mainMenuOpen, m_optionsOpen, m_loadScreenOpen, m_tutoOpen, m_selectionOpen;
+
+
+    [SerializeField, Tooltip("le menu de slection de letage")]
+    private GameObject KeyboardU, GamepadU, KeyboardM, GamepadM, KeyboardD, GamepadD, PlayButton, KupButton, KdownButton, GupButton, GdownButton;
+
+    public bool Kready= false;
     
+    public bool Gready= false;
+
+    private float playerWhere =0;
+
 
     // INITIALISE LES VALEURS
     private void Awake()
     {
         OpenAccueil();
+        playerWhere = PlayerPrefs.GetFloat("choix");
     }
+    // MENU SLECTION ETAGE
+
+    private void Update()
+    {
+        if (Kready == true && Gready == true)
+        {
+            PlayButton.SetActive(true);
+        }
+    }
+
+    public void Kup()
+    {
+        KeyboardM.SetActive(false);
+        KupButton.SetActive(false);
+        KdownButton.SetActive(false);
+        KeyboardU.SetActive(true);
+        GupButton.SetActive(false);
+        PlayerPrefs.SetFloat("choix",1);
+        Kready = true;
+    }
+    public void Kdown()
+    {
+        KeyboardM.SetActive(false);
+        KupButton.SetActive(false);
+        KdownButton.SetActive(false);
+        KeyboardD.SetActive(true);
+        GdownButton.SetActive(false);
+        PlayerPrefs.SetFloat("choix",2);
+        Kready = true;
+    }
+    public void Gup()
+    {
+        GamepadM.SetActive(false);
+        GupButton.SetActive(false);
+        GdownButton.SetActive(false);
+        GamepadU.SetActive(true);
+        KupButton.SetActive(false);
+        PlayerPrefs.SetFloat("choix",2);
+        Gready = true;
+    }
+    public void Gdown()
+    {
+        GamepadM.SetActive(false);
+        GupButton.SetActive(false);
+        GdownButton.SetActive(false);
+        GamepadD.SetActive(true);
+        KdownButton.SetActive(false);
+        PlayerPrefs.SetFloat("choix",1);
+        Gready = true;
+    }
+
+    
 
     // OPEN/CLOSE CANVAS
     
@@ -94,6 +158,8 @@ public class CanvasManager : MonoBehaviour
         {
             Selection.SetActive(true);
             m_selectionOpen = true;
+            
+            
         }
         else
         {
@@ -102,4 +168,3 @@ public class CanvasManager : MonoBehaviour
         }
     }
 }
-

@@ -55,9 +55,9 @@ public class KeyBoardPlayer : MonoBehaviour
     private Rigidbody m_rigidbody;
     private Collider m_collider;
 
-    public bool m_isHolding;
+    [SerializeField, Tooltip("gameobject target")]
+    private GameObject m_curTarget;
 
-  
     void Start()
     {
         characterController = GetComponent<CharacterController>();
@@ -116,10 +116,9 @@ public class KeyBoardPlayer : MonoBehaviour
                     m_collider = hit.collider;
 
                     m_rigidbody.isKinematic = true;
-                    m_rigidbody.useGravity = true;
                     m_collider.enabled = false;
 
-                    m_isHolding = true;
+                    m_curTarget.GetComponent<CubeScript>().enabled = true;
 
 
                 }
@@ -135,7 +134,7 @@ public class KeyBoardPlayer : MonoBehaviour
                 m_rigidbody = null;
                 m_collider = null;
 
-                m_isHolding = false;
+                m_curTarget.GetComponent<CubeScript>().enabled = false;
             }
         }
 
@@ -149,7 +148,7 @@ public class KeyBoardPlayer : MonoBehaviour
             m_rigidbody = null;
             m_collider = null;
 
-            m_isHolding = false;
+            m_curTarget.GetComponent<CubeScript>().enabled = false;
         }
 
         if (m_rigidbody)

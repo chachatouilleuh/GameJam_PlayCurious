@@ -1,11 +1,17 @@
+using System;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 [System.Serializable]
 public class SceneManager : MonoBehaviour
 {
+    private float m_choix ;
     // SCENE TRANSITION
-    
+    private void Awake()
+    {
+        m_choix = PlayerPrefs.GetFloat("choix");
+    }
+
     public void OpenMenuScene()
     {
         UnityEngine.SceneManagement.SceneManager.LoadScene (sceneName:"Menu");
@@ -18,7 +24,14 @@ public class SceneManager : MonoBehaviour
     
     public void OpenGameScene()
     {
-        UnityEngine.SceneManagement.SceneManager.LoadScene (sceneName:"Game 1");
+        if (m_choix == 1)
+        {
+            UnityEngine.SceneManagement.SceneManager.LoadScene (sceneName:"GAME");
+
+        }if (m_choix == 2)
+        {
+            UnityEngine.SceneManagement.SceneManager.LoadScene (sceneName:"GAME");
+        }
     }
     
     //PAUSE

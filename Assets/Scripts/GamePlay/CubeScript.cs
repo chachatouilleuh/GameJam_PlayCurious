@@ -8,12 +8,9 @@ public class CubeScript : MonoBehaviour
 {
     [SerializeField, Tooltip("transform de cube")]
     private Transform m_cubeTransform0;
-    
-    [SerializeField, Tooltip("transform de cube")]
-    private Transform m_cubeTransform1;
 
     private void Update()
     {
-        m_cubeTransform0.transform.position = new Vector3(m_cubeTransform1.position.x, transform.position.y, m_cubeTransform1.position.z);
+        m_cubeTransform0.transform.position = new Vector3(transform.position.x, m_cubeTransform0.transform.position.y, transform.position.z);
     }
 }
